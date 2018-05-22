@@ -1,0 +1,125 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="gdprcockpit.controller.DataVault"
+	xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:semantic="sap.m.semantic"
+	xmlns:core="sap.ui.core">
+	<semantic:DetailPage
+		id="vaultPage"
+		navButtonPress="onNavBack"
+		showNavButton="{device>/system/phone}"
+		title="{i18n>pageVault}" >
+		<semantic:content>
+			<VBox
+				alignItems="Stretch"
+				direction="Column"
+				fitContainer="false"
+				justifyContent="Start"
+				renderType="Div"
+				visible="true"
+				displayInline="false">
+				<items>
+					<Panel id="query" headerText="{i18n>VaultQuery}" expandable="true" expanded="true" expandAnimation="true">
+						<form:SimpleForm
+							layout="ResponsiveGridLayout"
+							columnsXL="2"
+							columnsL="2"
+							columnsM="2">
+							<core:Title />
+							<Label text="{i18n>VaultQueryUser}" class="sapUiTinyMarginTopBottom" />
+							<Input id="username" value="{Username}" enabled="false" visible="true" />
+							<Text id="userFullname" text="{FullName}" class="sapUiTinyMarginTopBottom" />
+							
+							<Label text="{i18n>VaultQuerySource}" class="sapUiTinyMarginTopBottom" />
+							<ComboBox
+									id="sourceSelector"
+									placeholder="{i18n>SourceSelect}"
+									showSecondaryValues="true"
+									items="{/SourceSet}"
+									change="onSelectSource"
+									selectionChange="onSelectSource">
+								<items>
+									<core:ListItem text="{Name}" key="{SrcId}" additionalText="{SrcId}"/>
+								</items>
+							</ComboBox>
+							<Label text="{i18n>VaultQueryField}" class="sapUiTinyMarginTopBottom" />
+							<ComboBox
+									id="fieldSelector"
+									placeholder="{i18n>QueryFieldSelect}"
+									showSecondaryValues="true"
+									items="{/FieldSet}"
+									change="onSelectField"
+									selectionChange="onSelectField">
+								<items>
+									<core:ListItem text="{Name}" key="{Id}" additionalText="{Id}"/>
+								</items>
+							</ComboBox>
+							
+							<Label text="{i18n>VaultQueryValue}" class="sapUiTinyMarginTopBottom" />
+							<SearchField id="queryfieldvalue" search="onVaultQuery" />
+							
+							<core:Title />
+							<Button id="VaultQuerySearch" text="Search data vault" icon="sap-icon://search" iconFirst="true" press="onVaultQuery" />
+						</form:SimpleForm>
+					</Panel>
+					
+					<Panel id="result" headerText="{i18n>VaultResult}" expandable="true" expanded="false" expandAnimation="true">
+						<mvc:XMLView viewName="gdprcockpit.view.VaultList" id="vaultList" />
+						<!--<Table
+							id="vaultentitycontent"
+							mode="SingleSelectMaster"
+							itemPress="onSelectVaultEntity"
+							noDataText="No data" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+							items="{/VaultEntitySet}">
+							<columns>
+								<Column minScreenWidth="Phone" mergeDuplicates="false">
+									<Text text="{i18n>SourceName}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								</Column>
+								<Column minScreenWidth="Tablet">
+									<Text text="{i18n>VaultEntityId}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								</Column>
+								<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+									<Text text="{i18n>VaultColumnField}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								</Column>
+								<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline">
+									<Text text="{i18n>VaultIdentifierValue}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+									<Text text="{i18n>VaultEntityCreationdate}"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+									<Text text="{i18n>VaultEntityRetentiondate}"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem type="Active">
+									<cells>
+										<ObjectIdentifier title="{Sourcename}" titleActive="false" visible="true"/>
+										<Text text="{EntityId}" />
+										<Text text="{Identifierfield1}" width="auto" textAlign="Begin" class="sapUiTinyMarginTopBottom" />
+										<Text text="{Identifiervalue1}" width="auto" textAlign="Begin" class="sapUiTinyMarginTopBottom" />
+										<Text text="{
+											path: 'CreationDate',
+											type: 'sap.ui.model.type.Date',
+											formatOptions: {
+												pattern: 'dd MMM yyyy'
+											}
+										}" width="auto" textAlign="Begin" class="sapUiTinyMarginTopBottom" />
+										<Text text="{
+											path: 'RetentionDate',
+											type: 'sap.ui.model.type.Date',
+											formatOptions: {
+												pattern: 'dd MMM yyyy'
+											}
+										}" width="auto" textAlign="Begin" class="sapUiTinyMarginTopBottom" />
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>-->
+					</Panel>
+				</items>
+			</VBox>
+		</semantic:content>
+	</semantic:DetailPage>
+</mvc:View>

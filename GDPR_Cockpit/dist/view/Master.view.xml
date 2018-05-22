@@ -1,0 +1,55 @@
+<mvc:View
+		controllerName="gdprcockpit.controller.Master"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:layout="sap.ui.layout"
+		xmlns:core="sap.ui.core"
+		xmlns="sap.m"
+		xmlns:semantic="sap.m.semantic"
+		xmlns:gdprcockpit="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+		class="side-navigation">
+
+	<semantic:MasterPage
+			id="page"
+			title="{i18n>appTitle} - {i18n>pageNavigation}"
+			navButtonPress="onNavBack"
+			showNavButton="false">
+		<semantic:subHeader>
+			<Bar id="headerBar">
+				<contentMiddle>
+					<Button icon="sap-icon://menu2" text="{i18n>collapse}" press="onToggleSideBar" width="100%" />
+				</contentMiddle>
+			</Bar>
+		</semantic:subHeader>
+
+		<semantic:content>
+			<!-- For client side filtering add this to the items attribute:  parameters: {operationMode: 'Client'}}" -->
+			<layout:Grid width="100%" class="logogrid" >
+				<Image src="images/saplogo.png" width="100%" />
+				<Image src="images/agre.png" width="100%" />
+			</layout:Grid>
+			<List
+				id="list"
+				items="{
+					path: '/NavigationSet'
+				}"
+				busyIndicatorDelay="{masterView>/delay}"
+				noDataText="{masterView>/noDataText}"
+				mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}"
+				growing="true"
+				growingScrollToLoad="true"
+				updateFinished="onUpdateFinished"
+				selectionChange="onNavigationSelect">
+				<items>
+					<StandardListItem
+						title="{Text}"
+						icon="{Icon}"
+						iconDensityAware="false"
+						iconInset="false"
+						gdprcockpit:key="{Target}" />
+				</items>
+			</List>
+		</semantic:content>
+
+	</semantic:MasterPage>
+
+</mvc:View>

@@ -1,0 +1,10 @@
+[{
+	"DsrId": "0000000003",
+	"RequestTypeDescription": "Show data",
+	"RequestType": "00001",
+	"Field": "00001",
+	"CreationDate": "/Date(1525125600000)/",
+	"Value": "mark.van.reeth@nessi.be",
+	"IdentityConfirmed": true,
+	"FieldName": "EMAIL"
+}]
