@@ -3,7 +3,8 @@
 	xmlns:core="sap.ui.core"
 	controllerName="gdprcockpit.controller.DsrList"
 	xmlns="sap.m"
-	xmlns:semantic="sap.m.semantic">
+	xmlns:semantic="sap.m.semantic"
+	xmlns:smartFB="sap.ui.comp.smartfilterbar">
 	
 	<semantic:DetailPage
 		id="page"
@@ -11,6 +12,13 @@
 		showNavButton="{device>/system/phone}"
 		title="{i18n>pageDsrList}">
 		<semantic:content>
+			<smartFB:SmartFilterBar
+				id="filterBarDSR"
+				entitySet="/DSRSet">
+				<smartFB:controlConfiguration>
+					<smartFB:ControlConfiguration key="DsrId" displayBehaviour="descriptionAndId" />
+				</smartFB:controlConfiguration>
+			</smartFB:SmartFilterBar>
 			<Table
 				width="100%"
 				noDataText="No data"
