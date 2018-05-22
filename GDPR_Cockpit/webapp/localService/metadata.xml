@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+   <edmx:DataServices m:DataServiceVersion="2.0">
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZGDPR_SRV" xml:lang="en" sap:schema-version="1">
+         <EntityType Name="ObjectDescription" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="ObjectType" />
+               <PropertyRef Name="ObjectId" />
+            </Key>
+            <Property Name="ObjectType" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Data element" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="ObjectId" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data field type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Langu" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+         </EntityType>
+         <EntityType Name="ValueHelp" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="Field" />
+               <PropertyRef Name="Id" />
+            </Key>
+            <Property Name="Field" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Field Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Field value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Filter1" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Field value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Filter2" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Field value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Filter3" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Field value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Filter4" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Field value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+         </EntityType>
+         <EntityType Name="user" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="Username" />
+            </Key>
+            <Property Name="Username" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="FullName" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Complete name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+         </EntityType>
+         <EntityType Name="BapiMessage" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="LogMsgNo" />
+            </Key>
+            <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Message type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Message Class" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Number" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Message number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Message" Type="Edm.String" Nullable="false" MaxLength="220" sap:unicode="false" sap:label="Message text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="LogNo" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Log number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="LogMsgNo" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Message no." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="MessageV1" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="MessageV2" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="MessageV3" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="MessageV4" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Parameter" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Parameter Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Row" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Parameter line" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Field" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Field name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Logical system" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <NavigationProperty Name="BapimessageToVaultgroup" Relationship="ZGDPR_SRV.VaultGroup_BapiMessage" FromRole="ToRole_VaultGroup_BapiMessage" ToRole="FromRole_VaultGroup_BapiMessage" />
+         </EntityType>
+         <EntityType Name="DSR" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="DsrId" />
+            </Key>
+            <Property Name="DsrId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="DS Request ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="RequestTypeDescription" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="RequestType" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Request type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Field" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data field type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="CreationDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Request date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="IdentityConfirmed" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Checkbox" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="FieldName" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Field name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <NavigationProperty Name="DsrToIdentity" Relationship="ZGDPR_SRV.DSR_Identity" FromRole="FromRole_DSR_Identity" ToRole="ToRole_DSR_Identity" />
+         </EntityType>
+         <EntityType Name="Identity" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="DsrId" />
+               <PropertyRef Name="Field" />
+            </Key>
+            <Property Name="DsrId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="DS Request ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Field" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data field type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="IdentityConfirmed" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Checkbox" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+         </EntityType>
+         <EntityType Name="Field" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="Id" />
+            </Key>
+            <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Field name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data field type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="InputAllowed" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Checkbox" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="TechnicalType" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Field data type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="TechnicalTypeDescr" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="UniqueIdentifier" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Unique identifier" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="MultipleValues" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Multiple values" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Active" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Active" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Langu" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <NavigationProperty Name="FieldToSourceField" Relationship="ZGDPR_SRV.Field_SourceField" FromRole="FromRole_Field_SourceField" ToRole="ToRole_Field_SourceField" />
+         </EntityType>
+         <EntityType Name="TechnicalType" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="DataType" />
+            </Key>
+            <Property Name="DataType" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Field data type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Type description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+         </EntityType>
+         <EntityType Name="Source" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="SrcId" />
+            </Key>
+            <Property Name="InputAllowed" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Checkbox" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Source name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="SrcId" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data source ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Source type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Score" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="GDPR score" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="BoName" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Src BO name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="BoMail" Type="Edm.String" Nullable="false" MaxLength="241" sap:unicode="false" sap:label="Src BO e-mail" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="BoDepartment" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Src BO department" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Supplier" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Supplier name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="SupplierContact" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Supplier contact" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Documentation" Type="Edm.String" Nullable="false" MaxLength="132" sap:unicode="false" sap:label="URL" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Active" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Active" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="LegalRetentionDate" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Legal retention date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="StoredBySupplier" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Stored by supplier" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Langu" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="SourceTypeDescription" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <NavigationProperty Name="SourceToField" Relationship="ZGDPR_SRV.Source_Fields" FromRole="FromRole_Source_Fields" ToRole="ToRole_Source_Fields" />
+            <NavigationProperty Name="SourceToUsers" Relationship="ZGDPR_SRV.Source_Users" FromRole="FromRole_Source_Users" ToRole="ToRole_Source_Users" />
+         </EntityType>
+         <EntityType Name="SourceUsers" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="Source" />
+               <PropertyRef Name="Username" />
+            </Key>
+            <Property Name="InputAllowed" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Checkbox" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Complete name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Source" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data source ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="UserActivity" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data field type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Username" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <NavigationProperty Name="UsersToSource" Relationship="ZGDPR_SRV.Source_Users" FromRole="ToRole_Source_Users" ToRole="FromRole_Source_Users" />
+         </EntityType>
+         <EntityType Name="VaultEntity" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="EntityId" />
+            </Key>
+            <Property Name="ConsentText" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Consent text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="EntityId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Vault ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            <Property Name="Erdat" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Created on" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Aendate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="EntitySetId" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Vault set ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="DsrId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="DS Request ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            <Property Name="FilterField" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data field type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            <Property Name="Sourcename" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="ConsentTypeDescr" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="FilterValue" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Field value" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            <Property Name="Source" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data source ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            <Property Name="ConsentFormDescr" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="CreationDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Creation date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="EntityIdDescr" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="RetentionDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Retention date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="ConsentType" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Consent type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="ConsentForm" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Consent form" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Identifierfield1" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Identifiervalue1" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Field value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Identifierfield2" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Identifiervalue2" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Field value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <NavigationProperty Name="EntityToField" Relationship="ZGDPR_SRV.VaultEntity_VaultField" FromRole="FromRole_VaultEntity_VaultField" ToRole="ToRole_VaultEntity_VaultField" />
+            <NavigationProperty Name="VaultentityToGroup" Relationship="ZGDPR_SRV.VaultGroup_VaultEntity" FromRole="ToRole_VaultGroup_VaultEntity" ToRole="FromRole_VaultGroup_VaultEntity" />
+         </EntityType>
+         <EntityType Name="VaultField" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="EntityId" />
+               <PropertyRef Name="SourceField" />
+               <PropertyRef Name="ValueId" />
+            </Key>
+            <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Field value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="EntityId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Vault ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="GdprField" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data field type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="GdprFieldDescription" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="SourceFieldName" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="FieldId" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data field type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Identifier" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Unique identifier" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="SourceField" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data field type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="ValueId" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Value ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="ValueSearchable" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="FieldName" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="FieldType" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Field data type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="FieldTypeDescr" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Type description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <NavigationProperty Name="VaultFieldToEntity" Relationship="ZGDPR_SRV.VaultEntity_VaultField" FromRole="ToRole_VaultEntity_VaultField" ToRole="FromRole_VaultEntity_VaultField" />
+         </EntityType>
+         <EntityType Name="Navigation" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="Target" />
+            </Key>
+            <Property Name="Target" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Icon" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+         </EntityType>
+         <EntityType Name="SourceFields" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="Source" />
+               <PropertyRef Name="SourceField" />
+            </Key>
+            <Property Name="Source" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data source ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="InputAllowed" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Checkbox" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="SourceField" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data field type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Field" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Data field type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="SourceFieldName" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="SrcfldActive" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Active" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <NavigationProperty Name="FieldToSource" Relationship="ZGDPR_SRV.Source_Fields" FromRole="ToRole_Source_Fields" ToRole="FromRole_Source_Fields" />
+            <NavigationProperty Name="SourceFieldToField" Relationship="ZGDPR_SRV.Field_SourceField" FromRole="ToRole_Field_SourceField" ToRole="FromRole_Field_SourceField" />
+         </EntityType>
+         <EntityType Name="VaultGroup" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="SetId" />
+            </Key>
+            <Property Name="SetId" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Vault set ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <NavigationProperty Name="VaultgroupToBapimessage" Relationship="ZGDPR_SRV.VaultGroup_BapiMessage" FromRole="FromRole_VaultGroup_BapiMessage" ToRole="ToRole_VaultGroup_BapiMessage" />
+            <NavigationProperty Name="VaultgroupToEntity" Relationship="ZGDPR_SRV.VaultGroup_VaultEntity" FromRole="FromRole_VaultGroup_VaultEntity" ToRole="ToRole_VaultGroup_VaultEntity" />
+         </EntityType>
+         <Association Name="VaultEntity_VaultField" sap:content-version="1">
+            <End Type="ZGDPR_SRV.VaultEntity" Multiplicity="1" Role="FromRole_VaultEntity_VaultField" />
+            <End Type="ZGDPR_SRV.VaultField" Multiplicity="*" Role="ToRole_VaultEntity_VaultField" />
+            <ReferentialConstraint>
+               <Principal Role="FromRole_VaultEntity_VaultField">
+                  <PropertyRef Name="EntityId" />
+               </Principal>
+               <Dependent Role="ToRole_VaultEntity_VaultField">
+                  <PropertyRef Name="EntityId" />
+               </Dependent>
+            </ReferentialConstraint>
+         </Association>
+         <Association Name="Field_SourceField" sap:content-version="1">
+            <End Type="ZGDPR_SRV.Field" Multiplicity="1" Role="FromRole_Field_SourceField" />
+            <End Type="ZGDPR_SRV.SourceFields" Multiplicity="*" Role="ToRole_Field_SourceField" />
+            <ReferentialConstraint>
+               <Principal Role="FromRole_Field_SourceField">
+                  <PropertyRef Name="Id" />
+               </Principal>
+               <Dependent Role="ToRole_Field_SourceField">
+                  <PropertyRef Name="Field" />
+               </Dependent>
+            </ReferentialConstraint>
+         </Association>
+         <Association Name="DSR_Identity" sap:content-version="1">
+            <End Type="ZGDPR_SRV.DSR" Multiplicity="1" Role="FromRole_DSR_Identity" />
+            <End Type="ZGDPR_SRV.Identity" Multiplicity="*" Role="ToRole_DSR_Identity" />
+            <ReferentialConstraint>
+               <Principal Role="FromRole_DSR_Identity">
+                  <PropertyRef Name="DsrId" />
+               </Principal>
+               <Dependent Role="ToRole_DSR_Identity">
+                  <PropertyRef Name="DsrId" />
+               </Dependent>
+            </ReferentialConstraint>
+         </Association>
+         <Association Name="Source_Users" sap:content-version="1">
+            <End Type="ZGDPR_SRV.Source" Multiplicity="1" Role="FromRole_Source_Users" />
+            <End Type="ZGDPR_SRV.SourceUsers" Multiplicity="*" Role="ToRole_Source_Users" />
+            <ReferentialConstraint>
+               <Principal Role="FromRole_Source_Users">
+                  <PropertyRef Name="SrcId" />
+               </Principal>
+               <Dependent Role="ToRole_Source_Users">
+                  <PropertyRef Name="Source" />
+               </Dependent>
+            </ReferentialConstraint>
+         </Association>
+         <Association Name="Source_Fields" sap:content-version="1">
+            <End Type="ZGDPR_SRV.Source" Multiplicity="*" Role="FromRole_Source_Fields" />
+            <End Type="ZGDPR_SRV.SourceFields" Multiplicity="*" Role="ToRole_Source_Fields" />
+            <ReferentialConstraint>
+               <Principal Role="FromRole_Source_Fields">
+                  <PropertyRef Name="SrcId" />
+               </Principal>
+               <Dependent Role="ToRole_Source_Fields">
+                  <PropertyRef Name="Source" />
+               </Dependent>
+            </ReferentialConstraint>
+         </Association>
+         <Association Name="VaultGroup_VaultEntity" sap:content-version="1">
+            <End Type="ZGDPR_SRV.VaultGroup" Multiplicity="1" Role="FromRole_VaultGroup_VaultEntity" />
+            <End Type="ZGDPR_SRV.VaultEntity" Multiplicity="*" Role="ToRole_VaultGroup_VaultEntity" />
+            <ReferentialConstraint>
+               <Principal Role="FromRole_VaultGroup_VaultEntity">
+                  <PropertyRef Name="SetId" />
+               </Principal>
+               <Dependent Role="ToRole_VaultGroup_VaultEntity">
+                  <PropertyRef Name="EntitySetId" />
+               </Dependent>
+            </ReferentialConstraint>
+         </Association>
+         <Association Name="VaultGroup_BapiMessage" sap:content-version="1">
+            <End Type="ZGDPR_SRV.VaultGroup" Multiplicity="1" Role="FromRole_VaultGroup_BapiMessage" />
+            <End Type="ZGDPR_SRV.BapiMessage" Multiplicity="*" Role="ToRole_VaultGroup_BapiMessage" />
+            <ReferentialConstraint>
+               <Principal Role="FromRole_VaultGroup_BapiMessage">
+                  <PropertyRef Name="SetId" />
+               </Principal>
+               <Dependent Role="ToRole_VaultGroup_BapiMessage">
+                  <PropertyRef Name="LogMsgNo" />
+               </Dependent>
+            </ReferentialConstraint>
+         </Association>
+         <EntityContainer Name="ZGDPR_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+            <EntitySet Name="ObjectDescriptionSet" EntityType="ZGDPR_SRV.ObjectDescription" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="ValueHelpSet" EntityType="ZGDPR_SRV.ValueHelp" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="userSet" EntityType="ZGDPR_SRV.user" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="BapiMessageSet" EntityType="ZGDPR_SRV.BapiMessage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="DSRSet" EntityType="ZGDPR_SRV.DSR" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="IdentitySet" EntityType="ZGDPR_SRV.Identity" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="FieldSet" EntityType="ZGDPR_SRV.Field" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="TechnicalTypeSet" EntityType="ZGDPR_SRV.TechnicalType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="SourceSet" EntityType="ZGDPR_SRV.Source" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="SourceUsersSet" EntityType="ZGDPR_SRV.SourceUsers" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="VaultEntitySet" EntityType="ZGDPR_SRV.VaultEntity" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="VaultFieldSet" EntityType="ZGDPR_SRV.VaultField" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="NavigationSet" EntityType="ZGDPR_SRV.Navigation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="SourceFieldsSet" EntityType="ZGDPR_SRV.SourceFields" sap:pageable="false" sap:content-version="1" />
+            <EntitySet Name="VaultGroupSet" EntityType="ZGDPR_SRV.VaultGroup" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+            <AssociationSet Name="VaultGroup_VaultEntitySet" Association="ZGDPR_SRV.VaultGroup_VaultEntity" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+               <End EntitySet="VaultGroupSet" Role="FromRole_VaultGroup_VaultEntity" />
+               <End EntitySet="VaultEntitySet" Role="ToRole_VaultGroup_VaultEntity" />
+            </AssociationSet>
+            <AssociationSet Name="VaultGroup_BapiMessageSet" Association="ZGDPR_SRV.VaultGroup_BapiMessage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+               <End EntitySet="VaultGroupSet" Role="FromRole_VaultGroup_BapiMessage" />
+               <End EntitySet="BapiMessageSet" Role="ToRole_VaultGroup_BapiMessage" />
+            </AssociationSet>
+            <AssociationSet Name="Field_SourceFieldSet" Association="ZGDPR_SRV.Field_SourceField" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+               <End EntitySet="FieldSet" Role="FromRole_Field_SourceField" />
+               <End EntitySet="SourceFieldsSet" Role="ToRole_Field_SourceField" />
+            </AssociationSet>
+            <AssociationSet Name="VaultEntity_VaultFieldSet" Association="ZGDPR_SRV.VaultEntity_VaultField" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+               <End EntitySet="VaultEntitySet" Role="FromRole_VaultEntity_VaultField" />
+               <End EntitySet="VaultFieldSet" Role="ToRole_VaultEntity_VaultField" />
+            </AssociationSet>
+            <AssociationSet Name="Source_FieldsSet" Association="ZGDPR_SRV.Source_Fields" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+               <End EntitySet="SourceSet" Role="FromRole_Source_Fields" />
+               <End EntitySet="SourceFieldsSet" Role="ToRole_Source_Fields" />
+            </AssociationSet>
+            <AssociationSet Name="Source_UsersSet" Association="ZGDPR_SRV.Source_Users" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+               <End EntitySet="SourceSet" Role="FromRole_Source_Users" />
+               <End EntitySet="SourceUsersSet" Role="ToRole_Source_Users" />
+            </AssociationSet>
+            <AssociationSet Name="DSR_IdentitySet" Association="ZGDPR_SRV.DSR_Identity" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+               <End EntitySet="DSRSet" Role="FromRole_DSR_Identity" />
+               <End EntitySet="IdentitySet" Role="ToRole_DSR_Identity" />
+            </AssociationSet>
+         </EntityContainer>
+         <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="http://sapagredev.agrealestate.extranet:8000/sap/opu/odata/sap/ZGDPR_SRV/$metadata" />
+         <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="http://sapagredev.agrealestate.extranet:8000/sap/opu/odata/sap/ZGDPR_SRV/$metadata" />
+      </Schema>
+   </edmx:DataServices>
+</edmx:Edmx>

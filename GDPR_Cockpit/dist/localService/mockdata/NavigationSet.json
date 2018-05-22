@@ -1,0 +1,16 @@
+[{
+	"Text": "Source management",
+	"ID": "source",
+	"Target": "SOURCE"
+}, {
+	"Text": "Data type management",
+	"ID": "datatypes",
+	"Target": "FIELD"
+}, {
+	"Text": "Data vault",
+	"ID": "vault",
+	"Target": "VAULT"
+}, {
+	"Target": "DSR",
+	"Text": "Data subject requests"
+}]
