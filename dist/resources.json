@@ -1,0 +1,294 @@
+{
+    "resources": [
+        {
+            "name": "localService/mockserver.js"
+        },
+        {
+            "name": "localService/mockdata/IdentitySet.json"
+        },
+        {
+            "name": "localService/mockdata/NavigationSet.json"
+        },
+        {
+            "name": "localService/mockdata/ObjectDescriptionSet.json"
+        },
+        {
+            "name": "localService/mockdata/DSRSet.json"
+        },
+        {
+            "name": "localService/mockdata/userSet.json"
+        },
+        {
+            "name": "localService/mockdata/DataTypeSet.json"
+        },
+        {
+            "name": "localService/mockdata/TechnicalTypeSet.json"
+        },
+        {
+            "name": "localService/mockdata/PeopleSet.json"
+        },
+        {
+            "name": "localService/mockdata/SourceSet.json"
+        },
+        {
+            "name": "localService/mockdata/ValueHelpSet.json"
+        },
+        {
+            "name": "localService/mockdata/SourceUsersSet.json"
+        },
+        {
+            "name": "localService/mockdata/FieldSet.json"
+        },
+        {
+            "name": "localService/mockdata/SourceFieldsSet.json"
+        },
+        {
+            "name": "localService/mockdata/VaultEntitySet.json"
+        },
+        {
+            "name": "localService/mockdata/VaultFieldSet.json"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "controller/MaintainDescriptions.controller.js"
+        },
+        {
+            "name": "controller/DataVaultEntity.controller.js"
+        },
+        {
+            "name": "controller/Splash.controller.js"
+        },
+        {
+            "name": "controller/DsrList.controller.js"
+        },
+        {
+            "name": "controller/SourceFields.controller.js"
+        },
+        {
+            "name": "controller/DataVault.controller.js"
+        },
+        {
+            "name": "controller/ListSelector.js"
+        },
+        {
+            "name": "controller/utilities.js"
+        },
+        {
+            "name": "controller/DataSources.controller.js"
+        },
+        {
+            "name": "controller/Master.controller.js"
+        },
+        {
+            "name": "controller/VaultList.controller.js"
+        },
+        {
+            "name": "controller/DataFields.controller.js"
+        },
+        {
+            "name": "controller/App.controller.js"
+        },
+        {
+            "name": "controller/Dsr.controller.js"
+        },
+        {
+            "name": "controller/ErrorHandler.js"
+        },
+        {
+            "name": "controller/DataFieldDetail.controller.js"
+        },
+        {
+            "name": "controller/BaseController.js"
+        },
+        {
+            "name": "controller/SourceUsers.controller.js"
+        },
+        {
+            "name": "test/testsuite.qunit.html"
+        },
+        {
+            "name": "test/unit/allTests.js"
+        },
+        {
+            "name": "test/unit/unitTests.qunit.html"
+        },
+        {
+            "name": "test/unit/controller/ListSelector.js"
+        },
+        {
+            "name": "test/unit/controller/App.controller.js"
+        },
+        {
+            "name": "test/unit/model/formatter.js"
+        },
+        {
+            "name": "test/unit/model/models.js"
+        },
+        {
+            "name": "test/images/agre.png"
+        },
+        {
+            "name": "test/images/saplogo.png"
+        },
+        {
+            "name": "test/images/gdprcockpit.png"
+        },
+        {
+            "name": "test/mockServer.html"
+        },
+        {
+            "name": "test/integration/NavigationJourneyPhone.js"
+        },
+        {
+            "name": "test/integration/AllJourneys.js"
+        },
+        {
+            "name": "test/integration/NotFoundJourney.js"
+        },
+        {
+            "name": "test/integration/NavigationJourney.js"
+        },
+        {
+            "name": "test/integration/opaTestsPhone.qunit.html"
+        },
+        {
+            "name": "test/integration/BusyJourneyPhone.js"
+        },
+        {
+            "name": "test/integration/PhoneJourneys.js"
+        },
+        {
+            "name": "test/integration/opaTests.qunit.html"
+        },
+        {
+            "name": "test/integration/MasterJourney.js"
+        },
+        {
+            "name": "test/integration/NotFoundJourneyPhone.js"
+        },
+        {
+            "name": "test/integration/BusyJourney.js"
+        },
+        {
+            "name": "test/integration/pages/Browser.js"
+        },
+        {
+            "name": "test/integration/pages/NotFound.js"
+        },
+        {
+            "name": "test/integration/pages/App.js"
+        },
+        {
+            "name": "test/integration/pages/Master.js"
+        },
+        {
+            "name": "test/integration/pages/Detail.js"
+        },
+        {
+            "name": "test/integration/pages/Common.js"
+        },
+        {
+            "name": "model/formatter.js"
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "i18n/i18n_en.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "mock_preview_sapui5.html"
+        },
+        {
+            "name": "test.html"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "images/saplogo.png"
+        },
+        {
+            "name": "images/gdprcockpit.png"
+        },
+        {
+            "name": "images/agre.png"
+        },
+        {
+            "name": "images/agresap.png"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "view/VaultList.view.xml"
+        },
+        {
+            "name": "view/UserNameValueHelp.fragment.xml"
+        },
+        {
+            "name": "view/DataVault.view.xml"
+        },
+        {
+            "name": "view/DsrList.view.xml"
+        },
+        {
+            "name": "view/MaintainDescriptions.view.xml"
+        },
+        {
+            "name": "view/DataVaultEntity.view.xml"
+        },
+        {
+            "name": "view/DataSources.view.xml"
+        },
+        {
+            "name": "view/App.view.xml"
+        },
+        {
+            "name": "view/Dsr.view.xml"
+        },
+        {
+            "name": "view/Master.view.xml"
+        },
+        {
+            "name": "view/SourceUsers.view.xml"
+        },
+        {
+            "name": "view/MessagePopover.fragment.xml"
+        },
+        {
+            "name": "view/Splash.view.xml"
+        },
+        {
+            "name": "view/SourceFields.view.xml"
+        },
+        {
+            "name": "view/NewDescriptionKey.fragment.xml"
+        },
+        {
+            "name": "view/DataFields.view.xml"
+        },
+        {
+            "name": "view/DataFieldDetail.view.xml"
+        },
+        {
+            "name": "css/global.css"
+        },
+        {
+            "name": "css/navigation.css"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}

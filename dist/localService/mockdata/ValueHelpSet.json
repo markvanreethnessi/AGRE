@@ -1,0 +1,17 @@
+[{
+	"Field": "XUBNAME",
+	"Id": "MVANREETH",
+	"Description": "Mark Van Reeth",
+	"Filter1": "MARK",
+	"Filter2": "VAN REETH",
+	"Filter3": "NESSI",
+	"Filter4": "BRASSCHAAT"
+}, {
+	"Field": "XUBNAME",
+	"Id": "AHUIJB",
+	"Description": "Lex Huijbers",
+	"Filter1": "ALEXANDER",
+	"Filter2": "HUIJBERS",
+	"Filter3": "NESSI",
+	"Filter4": "LEUVEN"
+}]

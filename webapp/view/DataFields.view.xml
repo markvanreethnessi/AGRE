@@ -1,0 +1,112 @@
+<mvc:View 
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	controllerName="gdprcockpit.controller.DataFields"
+	xmlns="sap.m"
+	xmlns:semantic="sap.m.semantic"
+	xmlns:gdpr="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	
+	<semantic:DetailPage
+		id="page"
+		navButtonPress="onNavBack"
+		showNavButton="{device>/system/phone}"
+		title="{i18n>pageFields}">
+		<semantic:content>
+			<Table
+				width="100%"
+				noDataText="No data"
+				mode="None"
+				showSeparators="All"
+				growing="false"
+				growingThreshold="20"
+				growingScrollToLoad="true"
+				items="{path: '/FieldSet', templateShareable:false}">
+				<infoToolbar>
+					<Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+						<content>
+							<Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+						</content>
+					</Toolbar>
+				</infoToolbar>
+				<headerToolbar>
+					<Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+						<content>
+							<!--<Title text="Data fields (3)" titleStyle="Auto" width="auto" textAlign="Begin" visible="true"/>-->
+							<ToolbarSpacer width=""/>
+							<!--<Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" press="onSortDatafield"
+								iconDensityAware="false"/>
+							<Button text="" type="Transparent" icon="sap-icon://filter" iconFirst="true" press="onFilterDatafield"
+								iconDensityAware="false"/>-->
+							<Button id="AddDataField" text="" type="Transparent" icon="sap-icon://add" iconFirst="true" press="onAddDataField" />
+							<!--<Button text="show messages" press="_onShowMessages"  />-->
+						</content>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column hAlign="Left" vAlign="Top" >
+							<Text text="{i18n>ColumnName}"/>
+					</Column>
+					<Column hAlign="Left" vAlign="Top" >
+							<Text text="{i18n>FieldsColumnDescription}" maxLines="1" wrapping="false" textAlign="Begin"/>
+					</Column>
+					<Column hAlign="Left" vAlign="Top" minScreenWidth="Tablet">
+							<Text text="{i18n>FieldsColumnTechnicaltype}" maxLines="1" wrapping="false" textAlign="Begin"/>
+					</Column>
+					<Column hAlign="Left" vAlign="Top" minScreenWidth="Desktop" width="4rem" >
+							<Text id="FieldsColumnUnique" text="{i18n>FieldsColumnUnique}" maxLines="1" wrapping="false" textAlign="Begin"/>
+					</Column>
+					<Column hAlign="Left" vAlign="Top" minScreenWidth="Desktop" width="6rem" >
+							<Text id="FieldsColumnMultiple" text="{i18n>FieldsColumnMultiplevalues}" maxLines="1" wrapping="false" textAlign="Begin"/>
+					</Column>
+					<Column hAlign="Left" vAlign="Top" minScreenWidth="Desktop" width="4rem">
+							<Text text="{i18n>FieldsColumnActive}" maxLines="1" wrapping="false" textAlign="Begin"/>
+					</Column>
+					<Column hAlign="Left" vAlign="Top" width="3rem" >
+							<Text text="{i18n>ColumnDetails}" maxLines="1" wrapping="false" textAlign="Begin"/>
+					</Column>
+					<Column hAlign="Left" vAlign="Top" minScreenWidth="Desktop" width="3rem" >
+							<Text text="{i18n>ColumnDelete}"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Active">
+						<cells>
+							<Input value="{Name}" enabled="{InputAllowed}" change="onChange" />
+							<Input value="{Description}" enabled="{InputAllowed}" change="onChange" />
+							<Select
+								selectedKey="{path: 'TechnicalType'}"
+								enabled="{InputAllowed}"
+								visible="true"
+								width="auto"
+								valueState="None"
+								maxWidth="100%"
+								showSecondaryValues="false"
+								change="onChange"
+								items="{path: '/TechnicalTypeSet', templateShareable:false}">
+								<items>
+									<core:ListItem key="{DataType}" text="{Description}" additionalText="{DataType}"/>
+								</items>
+							</Select>
+							<Switch state="{UniqueIdentifier}" enabled="{InputAllowed}" change="onChange" />
+							<Switch state="{MultipleValues}" enabled="{InputAllowed}" change="onChange" />
+							<Switch state="{Active}" enabled="{InputAllowed}" change="onChange" />
+							<!--<Button icon="sap-icon://edit" press="onShowFieldDetails" gdpr:field="{Id}" />-->
+							<FlexBox>
+								<Button icon="sap-icon://edit" press="onShowFieldDetails" visible="{InputAllowed}" gdpr:field="{Id}" />
+								<Button icon="sap-icon://display" press="onShowFieldDetails" visible="{=${InputAllowed}!==true}" gdpr:field="{Id}" />
+							</FlexBox>
+							<Button icon="sap-icon://delete" press="onDeleteField" enabled="{InputAllowed}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			<Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button text="Add a new field" type="Transparent" icon="sap-icon://add" iconFirst="true" press="onAddDataField" />
+					<!--<Button text="show messages" press="_onShowMessages"  />-->
+				</content>
+			</Toolbar>
+		</semantic:content>
+	</semantic:DetailPage>
+</mvc:View>

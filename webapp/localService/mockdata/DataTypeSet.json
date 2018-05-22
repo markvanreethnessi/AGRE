@@ -1,0 +1,10 @@
+[{
+	"Description": "Date",
+	"ID": "Date"
+}, {
+	"Description": "Text with the following pattern: *@*.*",
+	"ID": "E-mail"
+}, {
+	"Description": "Uppercase text",
+	"ID": "Uppercase"
+}]

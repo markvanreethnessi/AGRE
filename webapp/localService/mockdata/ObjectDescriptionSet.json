@@ -1,0 +1,26 @@
+[{
+	"ObjectType": "ZGDPR_DE_SRC_TYPE_ID",
+	"ObjectId": "00001",
+	"Langu": "EN",
+	"Description": "Web API"
+}, {
+	"ObjectType": "ZGDPR_DE_SRC_TYPE_ID",
+	"ObjectId": "00002",
+	"Langu": "EN",
+	"Description": "Local file"
+}, {
+	"ObjectType": "ACTIV_AUTH",
+	"ObjectId": "02",
+	"Langu": "EN",
+	"Description": "Change"
+}, {
+	"ObjectType": "ACTIV_AUTH",
+	"ObjectId": "03",
+	"Langu": "EN",
+	"Description": "Display"
+}, {
+	"ObjectType": "ZGDPR_DE_DSR_TYPE",
+	"ObjectId": "00001",
+	"Langu": "EN",
+	"Description": "Show data"
+}]
