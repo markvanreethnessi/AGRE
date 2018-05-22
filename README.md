@@ -1,2 +1,0 @@
-# AGRE
-AG RE development
